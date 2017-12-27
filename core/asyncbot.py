@@ -43,7 +43,7 @@ async def send_message(**kwargs):
     await request
 
 
-async def print_messege(message):
+async def print_message(message):
     """
     Repeat message
     """
@@ -61,7 +61,7 @@ async def process_update(update):
     Send update
     """
     pp.pprint(update)
-    pp.pprint((await print_messege(update["message"])))
+    pp.pprint((await print_message(update["message"])))
     return update["update_id"]
 
 
